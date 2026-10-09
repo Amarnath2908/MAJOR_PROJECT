@@ -1,0 +1,54 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.cache/
+
+# ── Environment / Secrets ─────────────────────────────────────────────────────
+# Real .env files must NEVER be committed. Only .env.example files are tracked.
+.env
+.env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# ── AI Model Weights (large binary files — too big for GitHub) ────────────────
+# Run scripts/download_models.py to fetch these locally.
+models/
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.ckpt
+*.bin
+
+# ── Generated Test Outputs ────────────────────────────────────────────────────
+grounded_sam_mask_*.png
+grounded_sam_output.jpg
+
+# ── IDE / Editor ──────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/

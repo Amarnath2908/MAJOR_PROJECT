@@ -1,0 +1,29 @@
+# .gitattributes — Normalise line endings across platforms
+# All text files: commit with LF, check out with OS-native endings
+* text=auto
+
+# Explicitly LF for cross-platform source files
+*.py   text eol=lf
+*.js   text eol=lf
+*.jsx  text eol=lf
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.sh   text eol=lf
+
+# Binary files — do not touch line endings
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pth  binary
+*.pt   binary
+*.bin  binary
+*.glb  binary
+*.gltf binary

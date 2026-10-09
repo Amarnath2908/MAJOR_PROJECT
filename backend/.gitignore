@@ -1,0 +1,68 @@
+# DesignVerse AI — .gitignore
+# ============================
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+
+# ── Virtual Environments ──────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env_backup
+ENV/
+
+# ── Environment / Secrets ────────────────────────────────────────────────────
+# DO NOT commit real .env with actual secrets
+# .env          ← uncomment this in production (keep template only)
+
+# ── Database ──────────────────────────────────────────────────────────────────
+database/*.db
+database/*.db-shm
+database/*.db-wal
+
+# ── Storage (user uploads — never commit user data) ───────────────────────────
+storage/uploads/*
+storage/edited/*
+storage/masks/*
+storage/depth/*
+storage/models3d/*
+storage/thumbnails/*
+
+# Keep the directories but ignore contents (except sample files)
+!storage/uploads/.gitkeep
+!storage/edited/sample.png
+!storage/masks/sample_mask.png
+!storage/depth/sample_depth.png
+!storage/models3d/sample.glb
+!storage/thumbnails/sample_thumb.png
+
+# ── IDE / Editor ──────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── MyPy ──────────────────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json

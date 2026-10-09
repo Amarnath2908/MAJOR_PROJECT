@@ -1,0 +1,33 @@
+# DesignVerse AI — Python Dependencies
+# ======================================
+# Install with:  pip install -r requirements.txt
+
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+
+# ── Data Validation ───────────────────────────────────────────────────────────
+pydantic==2.7.4
+pydantic-settings==2.3.3     # BaseSettings — reads from .env
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.31
+psycopg[binary]>=3.1.18
+# For async SQLAlchemy support (optional, useful for future scaling):
+# aiosqlite==0.20.0
+
+# ── Authentication ────────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0   # JWT encode / decode
+passlib[bcrypt]==1.7.4             # Password hashing (bcrypt)
+bcrypt==4.0.1                      # Pin to 4.x — bcrypt 5.x removed __about__ breaking passlib 1.7.4
+
+# ── File Handling ─────────────────────────────────────────────────────────────
+python-multipart==0.0.9     # Required for FastAPI file uploads (Form/UploadFile)
+Pillow==10.3.0              # Image processing (validation, thumbnail generation)
+opencv-python-headless==4.11.0.86  # Computer vision (headless = no GUI deps, NumPy 2.x compatible)
+
+# ── Environment ───────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dateutil==2.9.0.post0
